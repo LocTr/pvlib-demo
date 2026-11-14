@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "tilt_deg": 10.0,
+    "azimuth_deg": 180.0,
+    "size_kwp": 50.0,
+    "annual_energy_kwh": 72295.0790837186,
+    "daily_cv": 0.20466753441523863,
+    "investment_usd": 46000.0
+  },
+  "optimizer": {
+    "algorithm": "NSGA-II",
+    "population": 40,
+    "generations": 30,
+    "seed": 42
+  },
+  "evaluations": 1200,
+  "pareto_count": 455,
+  "weather_sha256": "c9174496658d0d83ea2fe46cba5b5d4c66b82012c4aa95c210bf9724543ac1df",
+  "weather_source": "European Commission JRC PVGIS 5.3 TMY",
+  "irradiance_time_offset_hours": 0.5,
+  "assumptions": {
+    "dc_ac_ratio": 1.2,
+    "nominal_inverter_efficiency": 0.96,
+    "cost": "5000 + size_kwp * (800 + 2 * tilt_deg); illustrative USD",
+    "variability": "population standard deviation / mean of 365 daily energies"
+  },
+  "versions": {
+    "pvlib": "0.16.1",
+    "pymoo": "0.6.2",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.11.2"
+  }
+}

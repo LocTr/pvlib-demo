@@ -1,0 +1,182 @@
+{
+  "source": "European Commission JRC PVGIS 5.3 TMY",
+  "source_url": "https://re.jrc.ec.europa.eu/api/v5_3/tmy",
+  "retrieved_at_utc": "2026-11-14T09:44:48.104883+00:00",
+  "site": {
+    "name": "Ho Chi Minh City",
+    "latitude": 10.8231,
+    "longitude": 106.6297,
+    "timezone": "Asia/Ho_Chi_Minh",
+    "utc_offset": 7,
+    "altitude_m": 10.0
+  },
+  "calendar_year_label": 2023,
+  "description": "Representative TMY assembled from historical months; not observed 2023 weather.",
+  "request": {
+    "roll_utc_offset": 7,
+    "coerce_year": 2023,
+    "map_variables": true,
+    "usehorizon": true
+  },
+  "pvlib_version": "0.16.1",
+  "pvgis_metadata": {
+    "inputs": {
+      "location": {
+        "latitude": 10.8231,
+        "longitude": 106.6297,
+        "elevation": 5.0,
+        "irradiance_time_offset": 0.5
+      },
+      "meteo_data": {
+        "radiation_db": "PVGIS-ERA5",
+        "meteo_db": "ERA5",
+        "year_min": 2005,
+        "year_max": 2023,
+        "use_horizon": true,
+        "horizon_db": "DEM-calculated"
+      },
+      "descriptions": {
+        "location": {
+          "description": "Selected location",
+          "variables": {
+            "latitude": {
+              "description": "Latitude",
+              "units": "decimal degree"
+            },
+            "longitude": {
+              "description": "Longitude",
+              "units": "decimal degree"
+            },
+            "elevation": {
+              "description": "Elevation",
+              "units": "m"
+            }
+          }
+        },
+        "meteo_data": {
+          "description": "Sources of meteorological data",
+          "variables": {
+            "radiation_db": {
+              "description": "Solar radiation database"
+            },
+            "meteo_db": {
+              "description": "Database used for meteorological variables other than solar radiation"
+            },
+            "year_min": {
+              "description": "First year of the calculations"
+            },
+            "year_max": {
+              "description": "Last year of the calculations"
+            },
+            "use_horizon": {
+              "description": "Include horizon shadows"
+            },
+            "horizon_db": {
+              "description": "Source of horizon data"
+            }
+          }
+        }
+      }
+    },
+    "outputs": {
+      "months_selected": {
+        "type": "time series",
+        "timestamp": "monthly",
+        "description": "months selected for the TMY"
+      },
+      "tmy_hourly": {
+        "type": "time series",
+        "timestamp": "hourly",
+        "variables": {
+          "T2m": {
+            "description": "2-m air temperature",
+            "units": "degree Celsius"
+          },
+          "RH": {
+            "description": "relative humidity",
+            "units": "%"
+          },
+          "G(h)": {
+            "description": "Global irradiance on the horizontal plane",
+            "units": "W/m2"
+          },
+          "Gb(n)": {
+            "description": "Beam/direct irradiance on a plane always normal to sun rays",
+            "units": "W/m2"
+          },
+          "Gd(h)": {
+            "description": "Diffuse irradiance on the horizontal plane",
+            "units": "W/m2"
+          },
+          "IR(h)": {
+            "description": "Surface infrared (thermal) irradiance on a horizontal plane",
+            "units": "W/m2"
+          },
+          "WS10m": {
+            "description": "10-m total wind speed",
+            "units": "m/s"
+          },
+          "WD10m": {
+            "description": "10-m wind direction (0 = N, 90 = E)",
+            "units": "degree"
+          },
+          "SP": {
+            "description": "Surface (air) pressure",
+            "units": "Pa"
+          }
+        }
+      }
+    },
+    "months_selected": [
+      {
+        "month": 1,
+        "year": 2015
+      },
+      {
+        "month": 2,
+        "year": 2005
+      },
+      {
+        "month": 3,
+        "year": 2019
+      },
+      {
+        "month": 4,
+        "year": 2012
+      },
+      {
+        "month": 5,
+        "year": 2005
+      },
+      {
+        "month": 6,
+        "year": 2011
+      },
+      {
+        "month": 7,
+        "year": 2009
+      },
+      {
+        "month": 8,
+        "year": 2022
+      },
+      {
+        "month": 9,
+        "year": 2013
+      },
+      {
+        "month": 10,
+        "year": 2015
+      },
+      {
+        "month": 11,
+        "year": 2015
+      },
+      {
+        "month": 12,
+        "year": 2020
+      }
+    ]
+  },
+  "csv_sha256": "c9174496658d0d83ea2fe46cba5b5d4c66b82012c4aa95c210bf9724543ac1df"
+}

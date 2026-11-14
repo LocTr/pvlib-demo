@@ -1,0 +1,2 @@
+# Preserve the exact cached bytes checked by weather_metadata.json.
+data/weather.csv -text
